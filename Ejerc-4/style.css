@@ -51,8 +51,8 @@ body.active {
 
 #toggle.active {
     background-color: rgb(63, 249, 249);
-    box-shadow: 0px 8px 50px rgba(147, 147, 147, 0.1) inset, 
-                0px 8px 10px rgba(137, 137, 137, 0.1) inset,
+    box-shadow: 0px 8px 50px rgba(255, 255, 255, 0.1) inset, 
+                0px 8px 10px rgba(255, 255, 255, 0.1) inset,
                 0px -4px 15px rgb(211, 211, 211) inset;
 }
 
