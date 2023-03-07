@@ -1,0 +1,67 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #404040;
+    min-height: 100vh;
+    transition: 500ms;
+}
+
+#toggle {
+    display: block;
+    position: relative;
+    width: 320px;
+    height: 160px;
+    border-radius: 150px;
+    background-color: #222;
+    box-shadow: 0px 8px 50px rgba(0, 0, 0, 0.1) inset, 
+                0px 8px 8px rgba(0, 0, 0, 0.1) inset,
+                0px -4px 4px rgb(0, 0, 0.1) inset;
+}
+
+#toggle #indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #444, #222);
+    cursor: pointer;
+    transform: scale(0.8);
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.5) inset, 
+                0px 4px 4px rgba(255, 255, 255, 0.2) inset,
+                0px -4px 4px rgba(255, 255, 255, 0.2) inset;
+    transition: 500ms;
+}
+
+/* Active */
+
+body.active {
+    background-color: rgb(176, 254, 254);
+}
+
+#toggle.active {
+    background-color: rgb(63, 249, 249);
+    box-shadow: 0px 8px 50px rgba(147, 147, 147, 0.1) inset, 
+                0px 8px 10px rgba(137, 137, 137, 0.1) inset,
+                0px -4px 15px rgb(211, 211, 211) inset;
+}
+
+#toggle.active #indicator {
+    background: linear-gradient(to bottom, #29f4ff, #84fffd);
+    box-shadow: 0px 8px 40px rgba(255, 255, 255, 0.5) inset, 
+                0px 4px 4px rgba(131, 255, 255, 0.2) inset,
+                0px -4px 4px rgba(124, 255, 253, 0.2) inset;
+    left: 160px;
+    transform: scale(0.9);
+
+}
