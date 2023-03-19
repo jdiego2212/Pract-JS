@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url(./ToDoBG.png);
+    background-image: url(./ToDoBG1.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -28,7 +28,7 @@ main {
     padding: 25px;
     width: 100%;
     max-width: 600px;
-    background-color: rgba(181, 179, 255, 0.4);
+    background-color: rgba(71, 70, 103, 0.4);
     border-radius: 20px;
     min-height: 85vh;
 }
@@ -78,6 +78,19 @@ header .date #wrap-date span {
     font-size: 25px;
     font-weight: bold;
     color: #303030;
+}
+
+header .date #day-num {
+    color: rgb(0, 20, 101);
+}
+
+header .date #wrap-date .month {
+    color: rgb(4, 9, 29);
+}
+
+header .date #wrap-date .year {
+    color: rgb(4, 9, 29);
+
 }
 
 /* Toggle Theme */
@@ -133,13 +146,13 @@ header #toggle-wrap .toggle span {
 #content .title h1{
     font-size: 45px;
     font-weight: 900;
-    background: rgb(0,149,191);
-    background: linear-gradient(90deg, rgba(0,149,191,1) 29%, rgba(0,94,133,0.765625) 99%);
+    background: rgb(86,98,180);
+    background: linear-gradient(90deg, rgba(0,5,91,0.765625) 100%, rgba(86,98,180,1) 66%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-#content form {
+#content .add-task {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,28 +161,29 @@ header #toggle-wrap .toggle span {
     padding: 20px;
 }
 
-#content form input[type="text"] {
+#content .add-task input[type="text"] {
     width: 80%;
     max-width: 280px;
     height: 35px;
     padding-left: 10px;
     border-radius: 25px;
-    border-color: rgb(0,149,191);
+    border-color: rgb(39, 96, 219);
     background-color: rgba(0, 0, 0, 0.2);
     font-size: 18px;
     font-family: 'Nanum Gothic Coding', monospace;
-}
-
-#content form input[type="text"]::placeholder {
     color: rgb(200, 229, 255);
 }
 
-#content form input[type="submit"] {
-    padding: 4px;
+#content .add-task input[type="text"]::placeholder {
+    color: rgb(200, 229, 255);
+}
+
+#content .add-task button {
+    padding: 6px;
     font-size: 20px;
     font-weight: 900;
     color: white;
-    background: linear-gradient(90deg, rgba(0,149,191,1) 29%, rgba(0,94,133,0.765625) 99%);
+    background: linear-gradient(90deg, rgba(0,5,91,0.765625) 40%, rgb(42, 71, 232) 106%);
     border: none;
     margin-left: 25px;
     width: 35px;
@@ -179,10 +193,8 @@ header #toggle-wrap .toggle span {
     transition: all 500ms;
 }
 
-#content form input[type="submit"]:hover {
-    color: black;
+#content .add-task button:hover {
     transform: scale(1.1);
-    background: linear-gradient(90deg, rgba(0,149,191,1) 29%, rgba(0,149,191,1) 99%);
 }
 
 /* List-Tasks */
@@ -190,7 +202,7 @@ header #toggle-wrap .toggle span {
     display: flex;
     justify-content: center;
 
-    width: 100%;
+    width: 120%;
     min-height: 220px;
 }
 
@@ -218,12 +230,14 @@ header #toggle-wrap .toggle span {
 
 #content #list-tasks ul li p {
     font-weight: 600;
-    color: #252525;
+    color: #151d28;
+    width: 45%;
 }
 
 #content #list-tasks ul li span {
     margin-left: 7px;
     margin-right: 7px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 500ms;
 }
@@ -254,7 +268,7 @@ footer {
 footer h4 {
     font-size: 15px;
     opacity: 0.4;
-    color: #303030;
+    color: #c3c3c3;
 }
 
 footer img {
@@ -263,5 +277,82 @@ footer img {
     color: black;
 }
 
-/* Responsive */
 
+/* Dark Theme */
+
+body.theme-dark {
+    background-image: url(./ToDoBG2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#container.theme-dark {
+    background-color: rgba(7, 7, 7, 0.4);
+}
+
+header #toggle-wrap .toggle.theme-dark {
+    background-color: aliceblue;
+    box-shadow: 0px 2px 50px rgba(95, 95, 95, 0.1) inset, 
+                0px 2px 8px rgba(101, 101, 101, 0.1) inset,
+                0px 0px 4px rgb(85, 85, 85) inset;
+}
+
+header #toggle-wrap .toggle span.theme-dark {
+    transform: translateX(35px);
+}
+
+header .date #day-num.theme-dark {
+    color: rgb(176, 192, 255);
+}
+
+header .date #wrap-date .month.theme-dark {
+    color: rgb(208, 216, 255);
+}
+
+header .date #wrap-date .year.theme-dark {
+    color: rgb(218, 225, 255);
+}
+
+#content .title h1.theme-dark {
+    background: rgb(0,175,224);
+    background: linear-gradient(170deg, rgb(138, 230, 255) 35%, rgba(14, 182, 253, 0.766) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#content .add-task input[type="text"].theme-dark {
+    border-color: rgb(0,149,191);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#content .add-task input[type="text"]::placeholder.theme-dark {
+    color: rgb(200, 229, 255);
+}
+
+#content .add-task button.theme-dark {
+    color: white;
+    background: linear-gradient(90deg, rgba(0,149,191,1) 29%, rgba(0,94,133,0.765625) 99%);
+}
+
+#content .add-task button:hover.theme-dark {
+    background: linear-gradient(90deg, rgba(0,149,191,1) 29%, rgba(0,149,191,1) 99%);
+}
+
+#content #list-tasks ul li p.theme-dark {
+    font-weight: 600;
+    color: #daeaff;
+}
+
+footer img.theme-dark {
+    background-color: aliceblue;
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px white;
+}
+
+/* Checked Task */
+
+.line-through {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
