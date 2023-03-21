@@ -56,7 +56,7 @@ window.addEventListener( 'load', () => {
         input.classList.toggle('theme-dark')
         btnAdd.classList.toggle('theme-dark')
         gitIcon.classList.toggle('theme-dark')
-        list.parentNode.querySelectorAll('.text').classList.toggle('theme-dark')
+        // list.parentNode.querySelector('.text').classList.toggle('theme-dark')
     }
 
     toggleTheme.addEventListener('click', changeTheme)
@@ -141,7 +141,7 @@ window.addEventListener( 'load', () => {
 
     // Event to Check and to Delete the Task
     list.addEventListener('click', (event) => {
-        const element = event.target 
+        const element = event.target
         const elementData = element.attributes.data.value
         console.log(elementData)
         
