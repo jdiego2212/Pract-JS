@@ -230,7 +230,7 @@ header #toggle-wrap .toggle span {
 
 #content #list-tasks ul li p {
     font-weight: 600;
-    color: #151d28;
+    color: #d9e8fc;
     width: 45%;
 }
 
@@ -248,7 +248,7 @@ header #toggle-wrap .toggle span {
 }
 
 #content #list-tasks ul li #check {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 13, 191);
 }
 
 #content #list-tasks ul li #delete {

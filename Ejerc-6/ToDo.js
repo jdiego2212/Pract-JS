@@ -56,7 +56,7 @@ window.addEventListener( 'load', () => {
         input.classList.toggle('theme-dark')
         btnAdd.classList.toggle('theme-dark')
         gitIcon.classList.toggle('theme-dark')
-        list.parentNode.querySelector('.text').classList.toggle('theme-dark')
+        list.parentNode.querySelectorAll('.text').classList.toggle('theme-dark')
     }
 
     toggleTheme.addEventListener('click', changeTheme)
